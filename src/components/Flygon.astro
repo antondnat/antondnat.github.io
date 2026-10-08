@@ -1,0 +1,30 @@
+---
+import Flygon from "../assets/flygon-flap.gif";
+import Explosion from "../assets/boom.gif";
+---
+
+<div
+class="absolute top-50 -left-0 flygon-button"
+
+>
+  <div class="z-10 explode"/>
+  <img class="fixed" src={Flygon.src}/>
+</div>
+
+
+
+<script>
+  const flygon = document.querySelector('.flygon-button');
+  const explode = document.querySelector('.explode');
+  if (explode != null) {
+    
+    
+  
+    explode.style.animation = null;
+
+    flygon?.addEventListener('click', () => {
+      explode.style.animationPlayState = 'running';
+    });
+  }
+
+</script>

@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+
+<!doctype html>
+<html lang="en" class="m-0 w-full">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Anton's Site</title>
+	</head>
+	<body class="m-0 w-dvw h-full pt-20 flex flex-col overflow-y-scroll overflow-x-clip">
+		<Header/>
+		<div class="w-[80%] min-w-sm mx-auto my-2 wrap-anywhere">
+		<slot />
+		</div>
+		<Footer/>
+	</body>
+</html>

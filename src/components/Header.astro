@@ -1,0 +1,17 @@
+---
+import EasyLink from './EasyLink.astro';
+import Flygon from './Flygon.astro'
+---
+
+<header class="sticky top-0 bg-white pb-2 w-screen pt-5">
+  <div class="w-[80%] mx-auto flex flex-col sm:flex-row items-center gap-4 sm:justify-between ">
+    <a href="/" class="text-3xl font-black text-black hover:text-green-600 transition-colors hover:cursor-pointer">anton.flygon</a>
+    <nav class="text-lg gap-6 justify-between sm:justify-end w-[80%] flex flex-row">
+      <EasyLink href="/">Home</EasyLink>
+      <EasyLink href="/about">About</EasyLink>
+      <EasyLink href="/blog">Blog</EasyLink>
+    </nav>
+    
+  </div>
+  <Flygon/>
+</header>

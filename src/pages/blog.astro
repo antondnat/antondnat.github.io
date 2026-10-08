@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+
+---
+
+<Layout>
+<div class=" flex flex-col gap-0.5 w-full">
+  {
+    posts.map((post: any) => (
+      <a href={`/posts/${post.id}`} class="hover:underline hover:underline-offset-4 px-4 py-2  rounded-md hover:cursor-pointer flex flex-row justify-between w-full">
+        <span class="font-bold truncate w-[70%]">
+          {post.data.title}
+        </span>
+        <span class="text-gray-500 text-sm ">{post.data.pubDate.toLocaleDateString()}</span>
+      </a>
+    ))
+  }
+</div>
+</Layout>

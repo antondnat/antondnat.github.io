@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-flygon: flygon 9s linear;
+  @keyframes flygon {
+    from {left: 100%;}
+    to {left:  calc(var(--spacing) * -60);}
+  }
+}
+
+/*
+Source - https://stackoverflow.com/a/45040337
+Posted by user
+Retrieved 2026-10-02, License - CC BY-SA 3.0
+*/
+
+.explode {
+  background-image: url('../assets/spritesheet.png');
+  width: 200px;
+  height: 277px;
+  animation: explode-anim 1.0s steps(17);
+}
+@keyframes explode-anim {
+  100% { background-position: -3400px; }
+}
+
