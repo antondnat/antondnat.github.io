@@ -21,6 +21,6 @@ Retrieved 2026-10-02, License - CC BY-SA 3.0
   animation: explode-anim 1.0s steps(17);
 }
 @keyframes explode-anim {
-  100% { background-position: -3400px; }
+  100% { background-position: -3400px;}
 }
 
